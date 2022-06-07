@@ -33,8 +33,8 @@ const Search = () => {
     search();
   }, [debouncedTerm]);
 
-//empty array = arrow function code is run at initial render,
 //nothing = arrow function code is run at initial render + after every rerender
+//empty array = arrow function code is run at initial render,
 //an array with data = arrow function code is run at initial render + after every rerender IF data has changed since last render
 
   const renderedResults = results.map((result) => {
