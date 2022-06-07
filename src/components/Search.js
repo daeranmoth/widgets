@@ -21,13 +21,20 @@ const Search = () => {
       setResults(data.query.search);
     };
 
-    const timeoutId = setTimeout(() => {
-      if (term) {
+    if (term && !results.length) {
       search();
+    } else {
+      const timeoutId = setTimeout(() => {
+      if (term) {
+        search();
       }
-    },500);
+    },1000);
 
-  }, [term]);
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }
+ }, [term]);
 //empty array = arrow function code is run at initial render,
 //nothing = arrow function code is run at initial render + after every rerender
 //an array with data = arrow function code is run at initial render + after every rerender IF data has changed since last render
