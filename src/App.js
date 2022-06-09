@@ -16,8 +16,8 @@ const items = [
     content:'best framework'
   },
   {
-    title:"how do you use react ?",
-    content: 'shiiiityy basard!'
+    title: "how do you use react ?",
+    content: 'very good question!'
   }
 ];
 
